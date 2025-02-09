@@ -3,6 +3,16 @@
   padding: 2rem;
 }
 
+.join {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px 0;
+}
+
 .game-buttons,
 .mode-buttons {
   margin-bottom: 2rem;

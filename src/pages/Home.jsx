@@ -1,4 +1,3 @@
-import React from "react";
 import TournamentCard from "../components/TournamentCard";
 import "./Home.css"; // Create this file for styling
 
