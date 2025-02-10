@@ -1,11 +1,13 @@
-import TournamentCard from "../components/TournamentCard";
-import "./Home.css"; // Create this file for styling
+import TournamentCard from "../components/TournamentCard/TournamentCard";
+import "./Home.css";
 
 const Home = () => {
   const featuredTournaments = [
     {
       id: 1,
       name: "FreeFire Weekly Cup",
+      game: "FreeFire",
+      mode: "Fullmap",
       entryFee: 10,
       prizePool: 500,
       startTime: "2023-10-15 18:00",
@@ -13,6 +15,8 @@ const Home = () => {
     {
       id: 2,
       name: "PUBG Solo Challenge",
+      game: "PUBG",
+      mode: "",
       entryFee: 5,
       prizePool: 300,
       startTime: "2023-10-16 20:00",

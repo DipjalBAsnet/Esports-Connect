@@ -1,6 +1,6 @@
 import "./TournamentCard.css";
 
-const TournamentCard = ({ tournament }) => {
+const TournamentCard = ({ tournament, onJoin }) => {
   return (
     <div className="tournament-card">
       <h3>{tournament.name}</h3>
@@ -8,7 +8,11 @@ const TournamentCard = ({ tournament }) => {
       <p>Entry Fee: ${tournament.entryFee}</p>
       <p>Prize Pool: ${tournament.prizePool}</p>
       <p>Start Time: {tournament.startTime}</p>
-      <button className="join">Join Tournament</button>
+      {onJoin && (
+        <button className="join" onClick={() => onJoin(tournament)}>
+          Join Tournament
+        </button>
+      )}
     </div>
   );
 };
