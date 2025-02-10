@@ -10,3 +10,58 @@
   gap: 1rem;
   margin-top: 2rem;
 }
+
+.created-challenges {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.created-challenges h2 {
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+
+.challenges-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.challenge-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 280px;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.challenge-card h3 {
+  margin-top: 0;
+  color: #4caf50;
+}
+
+.challenge-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.cancel-challenge {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.cancel-challenge:hover {
+  background: #e53935;
+}

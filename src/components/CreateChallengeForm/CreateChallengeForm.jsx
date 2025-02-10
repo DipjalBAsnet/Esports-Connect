@@ -2,18 +2,19 @@ import { useState } from "react";
 import ToggleGroup from "../ToggleGroup/ToggleGroup";
 import "./CreateChallengeForm.css";
 
-const CreateChallengeForm = ({ show, onClose }) => {
-  const [formData, setFormData] = useState({
-    roomType: "",
-    players: "1v1",
-    limitedAmmo: "",
-    characterSkills: "",
-    headshot: "",
-    gunAttributes: "",
-    roomMaker: "",
-    amount: "",
-  });
+const initialState = {
+  roomType: "",
+  players: "1v1",
+  limitedAmmo: "",
+  characterSkills: "",
+  headshot: "",
+  gunAttributes: "",
+  roomMaker: "",
+  amount: "",
+};
 
+const CreateChallengeForm = ({ show, onClose, onChallengeCreate }) => {
+  const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
@@ -39,8 +40,10 @@ const CreateChallengeForm = ({ show, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Challenge Details:", formData);
-      alert("Challenge Created Successfully!");
+      const challenge = { id: Date.now(), ...formData };
+      onChallengeCreate(challenge);
+      setFormData(initialState); // Reset form fields to initial state
+      setErrors({});
       onClose();
     } else {
       alert("Please fill in all required fields!");
