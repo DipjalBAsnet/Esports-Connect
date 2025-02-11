@@ -1,8 +1,8 @@
 import { useState } from "react";
-import GameModeSelector from "../components/GameModeSelector/GameModeSelector";
-import CreateChallengeForm from "../components/CreateChallengeForm/CreateChallengeForm";
-import TournamentCard from "../components/TournamentCard/TournamentCard";
-import { tournaments } from "../../data/tournament";
+import GameModeSelector from "../../components/GameModeSelector/GameModeSelector";
+import CreateChallengeForm from "../../components/CreateChallengeForm/CreateChallengeForm";
+import TournamentCard from "../../components/TournamentCard/TournamentCard";
+import { tournaments } from "../../../data/tournament";
 import "./Tournaments.css";
 
 const Tournaments = () => {

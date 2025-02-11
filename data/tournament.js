@@ -1,5 +1,4 @@
 export const tournaments = [
-  // FreeFire Tournaments
   {
     id: 1,
     name: "FreeFire Fullmap Weekly Cup",
